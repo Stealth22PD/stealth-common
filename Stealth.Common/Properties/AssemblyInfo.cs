@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Stealth.Common")]
-[assembly: AssemblyDescription("Support module for Respond Code 3")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Stealth22")]
 [assembly: AssemblyProduct("Stealth.Common")]
-[assembly: AssemblyCopyright("Copyright © 2015 Stealth22")]
+[assembly: AssemblyCopyright("Copyright © 2018 Stealth22")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.8.*")]
+[assembly: AssemblyVersion("2.0.*")]
 //[assembly: AssemblyFileVersion("1.7.0.0")]

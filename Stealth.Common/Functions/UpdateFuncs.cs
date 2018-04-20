@@ -10,7 +10,7 @@ namespace Stealth.Common.Functions
 {
     public static class UpdateFuncs
     {
-        public static void CheckForUpdates(int fileId, Version installedVersion, string productName, bool displayNotification = false, bool beta = false)
+        public static void CheckForUpdates(int fileId, Version installedVersion, string productName, bool displayNotification = false)
         {
             System.Threading.Tasks.Task.Factory.StartNew(async() =>
             {
@@ -19,7 +19,7 @@ namespace Stealth.Common.Functions
 
                 try
                 {
-                    updateResult = await IsNewerVersionAvailable(fileId, installedVersion, beta);
+                    updateResult = await IsNewerVersionAvailable(fileId, installedVersion, false);
 
                     if (updateResult.Item1 == true)
                     {

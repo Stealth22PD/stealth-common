@@ -81,7 +81,6 @@
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\Vector3Extensions.cs" />
     <Compile Include="Extensions\VehicleExtensions.cs" />
-    <Compile Include="Functions\BetaFuncs.cs" />
     <Compile Include="Functions\GameFuncs.cs" />
     <Compile Include="Functions\UpdateFuncs.cs" />
     <Compile Include="Models\Checkpoint.cs" />
