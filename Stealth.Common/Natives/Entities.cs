@@ -12,13 +12,13 @@ namespace Stealth.Common.Natives
         public static bool IsEntityAVehicle(Entity e)
         {
             //IS_ENTITY_A_VEHICLE
-            return Rage.Native.NativeFunction.CallByHash<bool>(0x6AC7003FA6E5575E, e);
+            return Rage.Native.NativeFunction.Natives.x6AC7003FA6E5575E<bool>(e);
         }
 
         public static bool IsEntityAPed(Entity e)
         {
             //IS_ENTITY_A_PED
-            return Rage.Native.NativeFunction.CallByHash<bool>(0x524AC5ECEA15343E, e);
+            return Rage.Native.NativeFunction.Natives.x524AC5ECEA15343E<bool>(e);
         }
     }
 }

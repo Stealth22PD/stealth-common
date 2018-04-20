@@ -9,7 +9,7 @@ namespace Stealth.Common.Natives
 {
     public static class Functions
     {
-        public static object CallByName(string nativeName, System.Type returnType, params Rage.Native.NativeArgument[] arguments)
+        /*public static object CallByName(string nativeName, System.Type returnType, params Rage.Native.NativeArgument[] arguments)
         {
             return Rage.Native.NativeFunction.CallByName(nativeName, returnType, arguments);
         }
@@ -27,6 +27,6 @@ namespace Stealth.Common.Natives
         public static void CallByHash(ulong hash, params Rage.Native.NativeArgument[] arguments)
         {
             Rage.Native.NativeFunction.CallByHash<uint>(hash, arguments);
-        }
+        }*/
     }
 }

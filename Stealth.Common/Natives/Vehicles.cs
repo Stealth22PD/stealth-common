@@ -25,7 +25,7 @@ namespace Stealth.Common.Natives
 
             try
             {
-                bool success = NativeFunction.CallByHash<bool>(0xFF071FB798B803B0, pPosition.X, pPosition.Y, pPosition.Z, new IntPtr(&outPosition), new IntPtr(&heading), 1, 0x40400000, 0);
+                bool success = NativeFunction.Natives.xFF071FB798B803B0<bool>(pPosition.X, pPosition.Y, pPosition.Z, new IntPtr(&outPosition), new IntPtr(&heading), 1, 0x40400000, 0);
 
                 if (success == false)
                 {
@@ -60,7 +60,7 @@ namespace Stealth.Common.Natives
                 uint primaryColor = 0;
                 uint secondaryColor = 0;
 
-                NativeFunction.CallByHash<uint>(0xA19435F193E081AC, v, new IntPtr(&primaryColor), new IntPtr(&secondaryColor));
+                NativeFunction.Natives.xA19435F193E081AC(v, new IntPtr(&primaryColor), new IntPtr(&secondaryColor));
 
                 c.PrimaryColor = (EPaint)primaryColor;
                 c.SecondaryColor = (EPaint)secondaryColor;
@@ -82,7 +82,7 @@ namespace Stealth.Common.Natives
                 int primColor = (int)pColors.PrimaryColor;
                 int secColor = (int)pColors.SecondaryColor;
 
-                NativeFunction.CallByHash<uint>(0x4F1D4BE3A7F24601, pVehicle, primColor, secColor);
+                NativeFunction.Natives.x4F1D4BE3A7F24601(pVehicle, primColor, secColor);
             }
             catch (Exception ex)
             {

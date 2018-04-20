@@ -109,7 +109,7 @@ namespace Stealth.Common.Models
 
             try
             {
-                int _handle = NativeFunction.CallByName<int>("CREATE_CHECKPOINT", type, place_position.X, place_position.Y, place_position.Z, NextPosition.X, NextPosition.Y, NextPosition.Z, radius, color.R, color.G, color.B, color.A, reserved);
+                int _handle = NativeFunction.Natives.CREATE_CHECKPOINT<int>(type, place_position.X, place_position.Y, place_position.Z, NextPosition.X, NextPosition.Y, NextPosition.Z, radius, color.R, color.G, color.B, color.A, reserved);
                 Handle = _handle;
                 valid = true;
                 SetHeight(height, height, radius);
@@ -127,7 +127,7 @@ namespace Stealth.Common.Models
         {
             this._color = new_color;
             if (valid)
-                NativeFunction.CallByName<uint>("SET_CHECKPOINT_RGBA", new_color.R, new_color.G, new_color.B, new_color.A);
+                NativeFunction.Natives.SET_CHECKPOINT_RGBA(new_color.R, new_color.G, new_color.B, new_color.A);
         }
 
         public void SetHeight(float near, float far, float radius)
@@ -135,13 +135,13 @@ namespace Stealth.Common.Models
             height = far;
 
             if (valid)
-                NativeFunction.CallByName<uint>("SET_CHECKPOINT_CYLINDER_HEIGHT", Handle, near, far, radius);
+                NativeFunction.Natives.SET_CHECKPOINT_CYLINDER_HEIGHT(Handle, near, far, radius);
         }
 
         public void Delete()
         {
             if (valid)
-                NativeFunction.CallByName<uint>("DELETE_CHECKPOINT", Handle);
+                NativeFunction.Natives.DELETE_CHECKPOINT(Handle);
 
             valid = false;
         }
