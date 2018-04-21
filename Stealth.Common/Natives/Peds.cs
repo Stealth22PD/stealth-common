@@ -20,7 +20,7 @@ namespace Stealth.Common.Natives
             Vector3 v3Result;
 
             bool safeLocFound = Rage.Native.NativeFunction.Natives.GET_SAFE_COORD_FOR_PED<bool>(v3PosOnStreet.X, v3PosOnStreet.Y, v3PosOnStreet.Z, true,
-                new NativeArgument(&v3Result.X), new NativeArgument(&v3Result.Y), new NativeArgument(&v3Result.Z), 0);
+                (IntPtr)(&v3Result.X), (IntPtr)(&v3Result.Y), (IntPtr)(&v3Result.Z), 0);
 
             if (safeLocFound == true)
             {
