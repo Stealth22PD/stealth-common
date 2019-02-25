@@ -52,7 +52,7 @@ namespace Stealth.Common.Extensions
                 FormattedText formatted = new FormattedText(item,
                      CultureInfo.GetCultureInfo("en-us"),
                      System.Windows.FlowDirection.LeftToRight,
-                     new Typeface(fontFamily), emSize, System.Windows.Media.Brushes.Black);
+                     new Typeface(fontFamily), emSize, System.Windows.Media.Brushes.Black, pixels);
 
                 actualLine.Append(item + " ");
                 actualWidth += formatted.Width;
