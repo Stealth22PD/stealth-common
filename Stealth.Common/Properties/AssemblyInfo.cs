@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Stealth22")]
 [assembly: AssemblyProduct("Stealth.Common")]
-[assembly: AssemblyCopyright("Copyright © 2018 Stealth22")]
+[assembly: AssemblyCopyright("Copyright © 2019 Stealth22")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
